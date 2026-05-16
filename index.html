@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="pt-PT" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso Completo de Reiki - Formação de Mestre</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            light: '#D3BFFF',
+                            DEFAULT: '#B79BF2', // Cor original destacada
+                            dark: '#9B7DE0',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* Esconder scrollbar em carrosséis mas manter funcionalidade */
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        /* Garantir que o scroll snap funcione suavemente */
+        .snap-mandatory {
+            scroll-snap-type: x mandatory;
+        }
+    </style>
+</head>
+
+<body class="font-sans text-gray-800 antialiased bg-gray-50 overflow-x-hidden">
+
+    <!-- Ícone Flutuante WhatsApp -->
+    <!-- <a href="https://wa.me/14065002287?text=Quero%20saber%20mais%20sobre%20o%20curso%20de%20Reiki" target="_blank"
+        rel="noopener noreferrer"
+        class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-transform duration-300">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
+            <path
+                d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c-.003 1.396.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
+        </svg>
+    </a> -->
+
+    <!-- Header / Hero Section -->
+    <header class="bg-[#1a1025] text-white py-12 md:py-24 relative overflow-hidden">
+        <div
+            class="absolute inset-0 opacity-20 bg-[url('https://mestrereiki.com/wp-content/uploads/2026/04/logo-reiki2_1.webp')] bg-center bg-cover bg-no-repeat">
+        </div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-4xl mx-auto text-center">
+                <img src="https://mestrereiki.com/wp-content/uploads/2026/04/logo-reiki2_1.webp" alt="Logo Reiki"
+                    class="w-28 md:w-48 mx-auto mb-6 md:mb-8 drop-shadow-2xl">
+
+                <h1 class="text-3xl sm:text-4xl md:text-6xl font-extrabold tracking-tight mb-4 md:mb-6 leading-tight">
+                    Alcance o <span class="text-brand">Mestrado em Reiki</span> e Atue como Fonte de Luz!
+                </h1>
+
+                <p
+                    class="text-base sm:text-lg md:text-2xl text-gray-300 mb-8 md:mb-10 max-w-2xl mx-auto leading-relaxed">
+                    Entenda <strong>símbolos</strong>, <strong>níveis</strong> e <strong>aplicações do Reiki</strong>
+                    para atuar com <strong>clareza</strong>, <strong>sensibilidade</strong> e <strong>consciência
+                        energética</strong>.
+                </p>
+
+                <!-- Vídeo Principal -->
+                <div
+                    class="relative w-full max-w-3xl mx-auto aspect-video rounded-xl md:rounded-2xl overflow-hidden shadow-2xl border-2 md:border-4 border-gray-800 bg-black mb-8 md:mb-10 group">
+
+                    <!-- O iframe do YouTube (ID adicionado para controle do autoplay) -->
+                    <iframe id="video-iframe" class="w-full h-full absolute inset-0"
+                        src="https://www.youtube.com/embed/agD4lITbOVg?rel=0" title="Vídeo Aula Grátis" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+
+                    <!-- Capa Estática com a sua imagem -->
+                    <div id="video-cover"
+                        class="absolute inset-0 w-full h-full cursor-pointer z-10 flex items-center justify-center"
+                        onclick="iniciarVideo()">
+                        <!-- Sua Imagem WebP -->
+                        <img src="https://mestrereiki.com/wp-content/uploads/2026/04/thumb-reikimestre1.webp"
+                            alt="Capa do Vídeo" class="w-full h-full object-cover">
+
+                        <!-- Ícone de Play estilizado no centro (opcional, mas bom para o usuário saber que é um vídeo) -->
+                        <div
+                            class="absolute bg-red-600 hover:bg-red-700 text-white rounded-full p-4 shadow-xl transform group-hover:scale-110 transition-all duration-200">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"
+                                class="w-8 h-8">
+                                <path d="M8 5v14l11-7z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="https://go.hotmart.com/N105853240O?ap=932e"
+                    class="inline-block w-full sm:w-auto bg-brand hover:bg-brand-light text-[#1a1025] font-bold text-lg sm:text-xl md:text-2xl py-4 px-8 md:px-10 rounded-full shadow-xl transition-all duration-300 hover:-translate-y-1 text-center">
+                    SIM, QUERO COMEÇAR AGORA!
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Credibilidade / ABRATH -->
+    <section class="py-10 bg-white border-b border-gray-200">
+        <div class="container mx-auto px-4">
+            <div
+                class="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-8 max-w-4xl mx-auto text-center md:text-left">
+                <img src="https://mestrereiki.com/wp-content/uploads/2025/02/logo_abrath.webp" alt="Selo ABRATH"
+                    class="w-40 md:w-56 drop-shadow-md">
+                <div>
+                    <h2 class="text-xl md:text-2xl font-bold text-gray-900 mb-2">Empresa credenciada pela ABRATH</h2>
+                    <p class="text-sm md:text-base text-gray-600 mb-2">Somos credenciados pela ABRATH, referência
+                        nacional em terapias holísticas.</p>
+                    <p class="text-sm md:text-base text-gray-600 mb-2">Esse selo garante que nossa formação atende aos
+                        mais altos padrões de qualidade, responsabilidade social e ética.</p>
+                    <p class="text-sm md:text-base text-gray-600 font-semibold">Com o registro CJAH-BR 14695, você
+                        conquista um certificado reconhecido.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre o Curso -->
+    <section class="py-16 md:py-20 bg-gray-50" style="background-color: #F7F3FF">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center gap-10 md:gap-12 max-w-5xl mx-auto">
+                <div class="w-full lg:w-1/2">
+                    <img src="https://mestrereiki.com/wp-content/uploads/2025/02/img_reiki_001.webp"
+                        alt="Curso de Reiki" class="w-full h-auto rounded-2xl shadow-xl max-w-md mx-auto lg:max-w-none">
+                </div>
+                <div class="w-full lg:w-1/2 text-center lg:text-left">
+                    <span class="text-brand font-bold tracking-wider uppercase text-xs md:text-sm">Curso Completo de
+                        Reiki</span>
+                    <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mt-2 mb-6 leading-tight">
+                        <span class="text-brand">Conquiste o Título de Mestre Reikiano</span> Com Uma Formação Completa
+                        e Estruturada
+                    </h2>
+                    <div class="text-gray-700 space-y-4 text-base md:text-lg">
+                        <p>Do Nível 1 ao Mestre Reikiano, este curso conduz você em uma jornada estruturada para aplicar
+                            o Reiki com segurança e profundidade.</p>
+                        <p>Você aprenderá a canalizar energia vital para restaurar equilíbrio físico, emocional e
+                            espiritual, em si mesmo e nos outros. Cada nível amplia sua capacidade de atuar com clareza,
+                            até conquistar a certificação de Mestre Reikiano.</p>
+                        <p class="font-semibold text-gray-900">E mais: você tem acesso vitalício e ilimitado a todas as
+                            aulas e materiais, além de suporte contínuo para tirar dúvidas e evoluir com segurança em
+                            cada etapa.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Para quem indicamos -->
+    <section class="py-16 md:py-20 bg-[#1a1025] text-white">
+        <div class="container mx-auto px-4 max-w-6xl text-center">
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 md:mb-4">
+                <span class="text-brand">Para quem indicamos</span> o curso completo de Reiki
+            </h2>
+            <p class="text-lg md:text-xl text-gray-300 mb-10 md:mb-16">Comece sua jornada com segurança</p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 md:gap-10">
+                <!-- Card 1 -->
+                <div class="bg-gray-800 rounded-2xl p-6 md:p-8 shadow-lg hover:shadow-brand/20 transition-shadow">
+                    <img src="https://mestrereiki.com/wp-content/uploads/2025/02/img_reiki_02.webp" alt="Iniciantes"
+                        class="w-24 h-24 md:w-32 md:h-32 mx-auto mb-4 md:mb-6 object-cover rounded-full border-4 border-brand">
+                    <h3 class="text-lg md:text-xl font-bold mb-3 md:mb-4">Iniciantes no Reiki</h3>
+                    <p class="text-sm md:text-base text-gray-400">Para quem sente o chamado de aprender Reiki, mas ainda
+                        não sabe por onde começar e busca uma formação simples, guiada e completa.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-gray-800 rounded-2xl p-6 md:p-8 shadow-lg hover:shadow-brand/20 transition-shadow">
+                    <img src="https://mestrereiki.com/wp-content/uploads/2025/02/img_reiki_04.webp" alt="Terapeutas"
+                        class="w-24 h-24 md:w-32 md:h-32 mx-auto mb-4 md:mb-6 object-cover rounded-full border-4 border-brand">
+                    <h3 class="text-lg md:text-xl font-bold mb-3 md:mb-4">Terapeutas e Profissionais</h3>
+                    <p class="text-sm md:text-base text-gray-400">Para quem já atua ou deseja atuar com terapias
+                        energéticas e quer ampliar seus atendimentos com mais preparo, confiança e profundidade.</p>
+                </div>
+                <!-- Card 3 -->
+                <div
+                    class="bg-gray-800 rounded-2xl p-6 md:p-8 shadow-lg hover:shadow-brand/20 transition-shadow sm:col-span-2 md:col-span-1">
+                    <img src="https://mestrereiki.com/wp-content/uploads/2025/02/img_reiki_03.webp"
+                        alt="Autoconhecimento"
+                        class="w-24 h-24 md:w-32 md:h-32 mx-auto mb-4 md:mb-6 object-cover rounded-full border-4 border-brand">
+                    <h3 class="text-lg md:text-xl font-bold mb-3 md:mb-4">Busca de Autoconhecimento</h3>
+                    <p class="text-sm md:text-base text-gray-400">Para quem deseja usar o Reiki como uma prática de
+                        equilíbrio, conexão interior e cuidado energético no dia a dia.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Uma pequena amostra (Vídeo) -->
+    <section class="py-16 md:py-20 bg-gray-50 border-b border-gray-200">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-8 md:mb-10">
+                Uma Pequena Amostra <span class="text-brand">do Que Espera Por Você</span>
+            </h2>
+            <div
+                class="relative w-full max-w-4xl mx-auto aspect-video rounded-xl md:rounded-2xl overflow-hidden shadow-2xl bg-black">
+                <iframe class="w-full h-full absolute inset-0" src="https://www.youtube.com/embed/rG5uVlZ4sso?rel=0"
+                    title="Amostra do Curso" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Módulos do Curso -->
+    <section class="py-16 md:py-20 bg-white" id="conteudo">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <div class="text-center mb-12 md:mb-16">
+                <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 md:mb-4">Veja o Que <span
+                        class="text-brand">Você Vai Aprender!</span></h2>
+                <p class="text-lg md:text-xl text-gray-600">Vídeo aulas completas e detalhadas, passo a passo.</p>
+            </div>
+
+            <div class="space-y-12 md:space-y-16">
+                <!-- Módulo 1 -->
+                <div class="flex flex-col md:flex-row items-center gap-6 md:gap-8 text-center md:text-left">
+                    <div class="w-full md:w-1/3 flex justify-center">
+                        <img src="https://mestrereiki.com/wp-content/uploads/2025/02/mod_reiki_03.webp" alt="Módulo 1"
+                            class="w-40 h-40 md:w-48 md:h-48 object-cover rounded-full shadow-lg border-4 border-gray-100">
+                    </div>
+                    <div class="w-full md:w-2/3">
+                        <h3 class="text-xl md:text-2xl font-bold text-brand mb-2 md:mb-3">Módulo 1 - O Despertar</h3>
+                        <p class="text-sm md:text-base text-gray-700 mb-3 md:mb-4">Introdução ao curso, origem e
+                            evolução do Reiki e os principais benefícios da prática, preparando a base para sua jornada
+                            até o mestrado.</p>
+                        <ul
+                            class="list-disc list-inside md:list-outside pl-0 md:pl-5 text-sm md:text-base text-gray-600 space-y-1">
+                            <li>Introdução ao curso e Boas-vindas</li>
+                            <li>História e contextualização Reiki</li>
+                            <li>Vantagens do Reiki</li>
+                            <li>Materiais Recomendados e Apostila</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Módulo 2 -->
+                <div class="flex flex-col md:flex-row-reverse items-center gap-6 md:gap-8 text-center md:text-right">
+                    <div class="w-full md:w-1/3 flex justify-center">
+                        <img src="https://mestrereiki.com/wp-content/uploads/2025/02/mod_reiki_04.webp" alt="Módulo 2"
+                            class="w-40 h-40 md:w-48 md:h-48 object-cover rounded-full shadow-lg border-4 border-gray-100">
+                    </div>
+                    <div class="w-full md:w-2/3">
+                        <h3 class="text-xl md:text-2xl font-bold text-brand mb-2 md:mb-3">Módulo 2 - A Alma do Reiki
+                        </h3>
+                        <p class="text-sm md:text-base text-gray-700 mb-3 md:mb-4">Estudo dos pilares e princípios do
+                            Reiki, sua filosofia e simbolismo, com integração de conceitos da medicina tradicional
+                            chinesa.</p>
+                        <ul class="list-disc list-inside md:list-none text-sm md:text-base text-gray-600 space-y-1">
+                            <li>Os 3 pilares e 5 princípios do Reiki</li>
+                            <li>Filosofia e Simbolismo</li>
+                            <li>Medicina tradicional chinesa</li>
+                            <li>Autoconhecimento</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Módulo 3 -->
+                <div class="flex flex-col md:flex-row items-center gap-6 md:gap-8 text-center md:text-left">
+                    <div class="w-full md:w-1/3 flex justify-center">
+                        <img src="https://mestrereiki.com/wp-content/uploads/2025/02/mod_reiki_02.webp" alt="Módulo 3"
+                            class="w-40 h-40 md:w-48 md:h-48 object-cover rounded-full shadow-lg border-4 border-gray-100">
+                    </div>
+                    <div class="w-full md:w-2/3">
+                        <h3 class="text-xl md:text-2xl font-bold text-brand mb-2 md:mb-3">Módulo 3 - Dança dos Chakras
+                        </h3>
+                        <p class="text-sm md:text-base text-gray-700 mb-3 md:mb-4">Compreenda chakras, aura e canais de
+                            energia, aprendendo técnicas de harmonização que ampliam a eficácia do Reiki.</p>
+                        <ul
+                            class="list-disc list-inside md:list-outside pl-0 md:pl-5 text-sm md:text-base text-gray-600 space-y-1">
+                            <li>O que são os chakras?</li>
+                            <li>A Aura humana e Canais de energia</li>
+                            <li>Harmonização de chakras</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Módulo 4 -->
+                <div class="flex flex-col md:flex-row-reverse items-center gap-6 md:gap-8 text-center md:text-right">
+                    <div class="w-full md:w-1/3 flex justify-center">
+                        <img src="https://mestrereiki.com/wp-content/uploads/2025/02/mod_reiki_01.webp" alt="Módulo 4"
+                            class="w-40 h-40 md:w-48 md:h-48 object-cover rounded-full shadow-lg border-4 border-gray-100">
+                    </div>
+                    <div class="w-full md:w-2/3">
+                        <h3 class="text-xl md:text-2xl font-bold text-brand mb-2 md:mb-3">Módulo 4 - Reiki em Ação:
+                            Nível 1</h3>
+                        <p class="text-sm md:text-base text-gray-700 mb-3 md:mb-4">Aprenda o uso dos símbolos do Reiki,
+                            com foco no Choku Rei, técnicas de respiração e aplicações práticas.</p>
+                        <ul class="list-disc list-inside md:list-none text-sm md:text-base text-gray-600 space-y-1">
+                            <li>Símbolos do Reiki e Choku Rei</li>
+                            <li>Ativando o símbolo na prática</li>
+                            <li>Reiki de Chujiro hayashi</li>
+                            <li>Aplicação de Reiki</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Módulo 5 -->
+                <div class="flex flex-col md:flex-row items-center gap-6 md:gap-8 text-center md:text-left">
+                    <div class="w-full md:w-1/3 flex justify-center">
+                        <img src="https://mestrereiki.com/wp-content/uploads/2025/02/mod_reiki_09.webp" alt="Módulo 5"
+                            class="w-40 h-40 md:w-48 md:h-48 object-cover rounded-full shadow-lg border-4 border-gray-100">
+                    </div>
+                    <div class="w-full md:w-2/3">
+                        <h3 class="text-xl md:text-2xl font-bold text-brand mb-2 md:mb-3">Módulo 5 - Elevação
+                            Espiritual: Nível 2</h3>
+                        <p class="text-sm md:text-base text-gray-700 mb-3 md:mb-4">Estudo aprofundado dos símbolos Sei
+                            He Ki e Hon Sha Ze Sho Nen, centralização, limpeza da aura e envio à distância.</p>
+                        <ul
+                            class="list-disc list-inside md:list-outside pl-0 md:pl-5 text-sm md:text-base text-gray-600 space-y-1">
+                            <li>SEI HE KI e Hon Sha Ze Sho Nen</li>
+                            <li>Reiki a distância (técnicas de envio)</li>
+                            <li>Limpeza da aura pessoal</li>
+                            <li>Nentatsu – reprogramação mental</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Módulo 6 -->
+                <div class="flex flex-col md:flex-row-reverse items-center gap-6 md:gap-8 text-center md:text-right">
+                    <div class="w-full md:w-1/3 flex justify-center">
+                        <img src="https://mestrereiki.com/wp-content/uploads/2025/02/mod_reiki_06.webp" alt="Módulo 6"
+                            class="w-40 h-40 md:w-48 md:h-48 object-cover rounded-full shadow-lg border-4 border-gray-100">
+                    </div>
+                    <div class="w-full md:w-2/3">
+                        <h3 class="text-xl md:text-2xl font-bold text-brand mb-2 md:mb-3">Módulo 6 - Ascensão ao
+                            Mestrado: Nível 3A</h3>
+                        <p class="text-sm md:text-base text-gray-700 mb-3 md:mb-4">Aprofunde-se no uso do símbolo Dai
+                            Koo Myo, cirurgia espiritual e as mudanças energéticas da iniciação.</p>
+                        <ul class="list-disc list-inside md:list-none text-sm md:text-base text-gray-600 space-y-1">
+                            <li>O quarto símbolo DAI KOO MYO</li>
+                            <li>Mudanças energéticas do nível 3A</li>
+                            <li>Cirurgia astral/espiritual</li>
+                            <li>Aplicação pelo umbigo</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Módulo 7 -->
+                <div class="flex flex-col md:flex-row items-center gap-6 md:gap-8 text-center md:text-left">
+                    <div class="w-full md:w-1/3 flex justify-center">
+                        <img src="https://mestrereiki.com/wp-content/uploads/2025/02/mod_reiki_05.webp" alt="Módulo 7"
+                            class="w-40 h-40 md:w-48 md:h-48 object-cover rounded-full shadow-lg border-4 border-gray-100">
+                    </div>
+                    <div class="w-full md:w-2/3">
+                        <h3 class="text-xl md:text-2xl font-bold text-brand mb-2 md:mb-3">Módulo 7 - Domínio Divino:
+                            Nível 3B</h3>
+                        <p class="text-sm md:text-base text-gray-700 mb-3 md:mb-4">Estudo do símbolo Raku, conceitos da
+                            tradição budista tibetana e a técnica Jacki Kiri Joka Ho para purificação.</p>
+                        <ul
+                            class="list-disc list-inside md:list-outside pl-0 md:pl-5 text-sm md:text-base text-gray-600 space-y-1">
+                            <li>Raku: o símbolo do raio de fogo</li>
+                            <li>Conceitos Budistas Tibetanos</li>
+                            <li>Técnica Jacki Kiri Joka Ho</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Módulo 8 -->
+                <div class="flex flex-col md:flex-row-reverse items-center gap-6 md:gap-8 text-center md:text-right">
+                    <div class="w-full md:w-1/3 flex justify-center">
+                        <img src="https://mestrereiki.com/wp-content/uploads/2025/02/mod_reiki_07.webp" alt="Módulo 8"
+                            class="w-40 h-40 md:w-48 md:h-48 object-cover rounded-full shadow-lg border-4 border-gray-100">
+                    </div>
+                    <div class="w-full md:w-2/3">
+                        <h3 class="text-xl md:text-2xl font-bold text-brand mb-2 md:mb-3">Módulo 8 - Consagração:
+                            Mestrado</h3>
+                        <p class="text-sm md:text-base text-gray-700 mb-3 md:mb-4">Práticas de meditação para remoção de
+                            implantes, proteção pessoal e sintonização de cura.</p>
+                        <ul class="list-disc list-inside md:list-none text-sm md:text-base text-gray-600 space-y-1">
+                            <li>Meditação para limpeza do sistema</li>
+                            <li>Proteção pessoal, residencial e veicular</li>
+                            <li>Respiração Violeta e Sintonização</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Bônus -->
+    <section class="py-16 md:py-20 bg-gray-50 border-t border-gray-200">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-gray-900 mb-10 md:mb-16">
+                Receba <span class="text-brand">Bônus Exclusivos</span> Hoje!
+            </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-10">
+
+                <!-- Bonus 1 -->
+                <div
+                    class="bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col hover:-translate-y-1 transition-transform">
+                    <img src="https://mestrereiki.com/wp-content/uploads/2025/02/mod_reiki_08.webp" alt="Bônus 1"
+                        class="w-full h-40 md:h-48 object-cover">
+                    <div class="p-6 flex-grow">
+                        <h3 class="text-lg md:text-xl font-bold text-gray-900 mb-2 md:mb-3">Bônus 1: Toques Celestiais
+                        </h3>
+                        <p class="text-gray-600 text-sm">Orientações para atendimentos online, Reiki em crianças,
+                            gestantes e animais.</p>
+                    </div>
+                </div>
+
+                <!-- Bonus 2 -->
+                <div
+                    class="bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col hover:-translate-y-1 transition-transform">
+                    <img src="https://mestrereiki.com/wp-content/uploads/2026/04/mod_reiki_10_1.webp" alt="Bônus 2"
+                        class="w-full h-40 md:h-48 object-cover">
+                    <div class="p-6 flex-grow">
+                        <h3 class="text-lg md:text-xl font-bold text-gray-900 mb-2 md:mb-3">Bônus 2: Acolhimento
+                            Vibracional</h3>
+                        <p class="text-gray-600 text-sm">Práticas de respiração, grounding, limpeza energética e rituais
+                            diários para acalmar a mente.</p>
+                    </div>
+                </div>
+
+                <!-- Bonus 3 -->
+                <div
+                    class="bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col hover:-translate-y-1 transition-transform sm:col-span-2 md:col-span-1">
+                    <img src="https://mestrereiki.com/wp-content/uploads/2026/04/mod_reiki_11_1.webp" alt="Bônus 3"
+                        class="w-full h-40 md:h-48 object-cover">
+                    <div class="p-6 flex-grow">
+                        <h3 class="text-lg md:text-xl font-bold text-gray-900 mb-2 md:mb-3">Bônus 3: Estudos
+                            Complementares</h3>
+                        <p class="text-gray-600 text-sm">Aprofunde o Reiki com cristais, ciclos lunares, florais,
+                            cromoterapia e prosperidade.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="text-center mt-12 md:mt-16">
+                <p class="text-xl md:text-2xl font-bold text-gray-900 mb-6">E muito mais! <span
+                        class="text-brand">HOJE</span></p>
+                <div
+                    class="inline-block w-full sm:w-auto bg-white border-2 border-brand rounded-xl py-6 px-6 md:px-10 shadow-lg">
+                    <p class="text-lg md:text-xl text-gray-600">Por APENAS</p>
+                    <p class="text-3xl sm:text-4xl font-black text-gray-900 my-2">12x de R$ 20,37*</p>
+                    <p class="text-xs sm:text-sm text-gray-500">Ou R$ 197,00 à vista</p>
+                    <a href="https://go.hotmart.com/N105853240O?ap=932e"
+                        class="block w-full sm:inline-block mt-6 bg-brand hover:bg-brand-light text-[#1a1025] font-bold text-base sm:text-lg py-4 px-6 md:px-8 rounded-full shadow-md transition-transform hover:-translate-y-1">
+                        SIM, QUERO COMEÇAR AGORA!
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Depoimentos com formato Shorts -->
+    <section class="py-16 md:py-20 bg-[#1a1025] text-white" id="depoimentos">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-10 md:mb-12">
+                <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 md:mb-4">Veja o Que Nossos Alunos <span
+                        class="text-brand">Estão Dizendo!</span></h2>
+                <p class="text-base md:text-lg text-gray-400">Confira as transformações reais de quem já fez o curso.
+                </p>
+            </div>
+
+            <!-- Horizontal Scroll Container com Setas -->
+            <div class="relative max-w-[1400px] mx-auto group">
+
+                <!-- Botão Voltar -->
+                <button
+                    onclick="document.getElementById('depoimentos-container').scrollBy({left: -320, behavior: 'smooth'})"
+                    class="absolute left-2 md:left-6 top-[45%] -translate-y-1/2 z-20 bg-gray-900/80 hover:bg-brand text-white hover:text-[#1a1025] p-3 md:p-4 rounded-full backdrop-blur-md transition-all shadow-[0_0_15px_rgba(0,0,0,0.5)] border border-gray-700 opacity-90 hover:opacity-100 hover:scale-105">
+                    <svg class="w-6 h-6 md:w-8 md:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7">
+                        </path>
+                    </svg>
+                </button>
+
+                <!-- Container dos Vídeos -->
+                <div id="depoimentos-container"
+                    class="flex overflow-x-auto hide-scrollbar space-x-4 md:space-x-6 pb-6 md:pb-8 snap-x snap-mandatory px-4 sm:px-16 md:px-24">
+
+                    <!-- Vídeo 1 (Short Format) -->
+                    <div
+                        class="flex-none w-60 md:w-72 snap-center relative aspect-[9/16] rounded-2xl overflow-hidden shadow-2xl border border-gray-700 bg-black">
+                        <iframe class="absolute inset-0 w-full h-full"
+                            src="https://www.youtube.com/embed/NAM1BXbOhT8?rel=0" frameborder="0"
+                            allowfullscreen></iframe>
+                    </div>
+                    <!-- Vídeo 2 (Short Format) -->
+                    <div
+                        class="flex-none w-60 md:w-72 snap-center relative aspect-[9/16] rounded-2xl overflow-hidden shadow-2xl border border-gray-700 bg-black">
+                        <iframe class="absolute inset-0 w-full h-full"
+                            src="https://www.youtube.com/embed/TpLcDKTyfmM?rel=0" frameborder="0"
+                            allowfullscreen></iframe>
+                    </div>
+                    <!-- Vídeo 3 (Short Format) -->
+                    <div
+                        class="flex-none w-60 md:w-72 snap-center relative aspect-[9/16] rounded-2xl overflow-hidden shadow-2xl border border-gray-700 bg-black">
+                        <iframe class="absolute inset-0 w-full h-full"
+                            src="https://www.youtube.com/embed/sehktRbmyb4?rel=0" frameborder="0"
+                            allowfullscreen></iframe>
+                    </div>
+                    <!-- Vídeo 4 (Short Format) -->
+                    <div
+                        class="flex-none w-60 md:w-72 snap-center relative aspect-[9/16] rounded-2xl overflow-hidden shadow-2xl border border-gray-700 bg-black">
+                        <iframe class="absolute inset-0 w-full h-full"
+                            src="https://www.youtube.com/embed/l5NjLu4HoEQ?rel=0" frameborder="0"
+                            allowfullscreen></iframe>
+                    </div>
+                    <!-- Vídeo 5 (Short Format) -->
+                    <div
+                        class="flex-none w-60 md:w-72 snap-center relative aspect-[9/16] rounded-2xl overflow-hidden shadow-2xl border border-gray-700 bg-black">
+                        <iframe class="absolute inset-0 w-full h-full"
+                            src="https://www.youtube.com/embed/tFsCl9AboeY?rel=0" frameborder="0"
+                            allowfullscreen></iframe>
+                    </div>
+                    <!-- Vídeo 6 (Short Format) -->
+                    <div
+                        class="flex-none w-60 md:w-72 snap-center relative aspect-[9/16] rounded-2xl overflow-hidden shadow-2xl border border-gray-700 bg-black">
+                        <iframe class="absolute inset-0 w-full h-full"
+                            src="https://www.youtube.com/embed/djhBmGwoMS8?rel=0" frameborder="0"
+                            allowfullscreen></iframe>
+                    </div>
+
+                </div>
+
+                <!-- Botão Avançar -->
+                <button
+                    onclick="document.getElementById('depoimentos-container').scrollBy({left: 320, behavior: 'smooth'})"
+                    class="absolute right-2 md:right-6 top-[45%] -translate-y-1/2 z-20 bg-gray-900/80 hover:bg-brand text-white hover:text-[#1a1025] p-3 md:p-4 rounded-full backdrop-blur-md transition-all shadow-[0_0_15px_rgba(0,0,0,0.5)] border border-gray-700 opacity-90 hover:opacity-100 hover:scale-105">
+                    <svg class="w-6 h-6 md:w-8 md:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <p class="text-center text-gray-500 text-xs md:text-sm mt-4 flex items-center justify-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 md:h-5 md:w-5 animate-pulse" fill="none"
+                    viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+                </svg>
+                Use as setas ou arraste para os lados
+            </p>
+        </div>
+    </section>
+
+    <!-- Certificados -->
+    <section class="py-16 md:py-20 bg-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 md:mb-4">
+                <span class="text-brand">4 Certificados Inclusos</span> e Válidos!
+            </h2>
+            <p class="text-base md:text-lg text-gray-600 mb-10 md:mb-12">Disponíveis em sua área restrita após concluir
+                o curso, válidos em todo o território nacional.</p>
+
+            <div class="relative max-w-6xl mx-auto group">
+                <!-- Botão Voltar -->
+                <button
+                    onclick="document.getElementById('certificados-container').scrollBy({left: -320, behavior: 'smooth'})"
+                    class="absolute left-0 md:-left-6 top-1/2 -translate-y-1/2 z-20 bg-white hover:bg-brand text-gray-800 hover:text-white p-2 md:p-4 rounded-full transition-all shadow-[0_0_10px_rgba(0,0,0,0.15)] border border-gray-100 hover:scale-105">
+                    <svg class="w-6 h-6 md:w-8 md:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7">
+                        </path>
+                    </svg>
+                </button>
+
+                <!-- Container Certificados -->
+                <div id="certificados-container"
+                    class="flex overflow-x-auto hide-scrollbar space-x-4 md:space-x-6 pb-8 snap-x snap-mandatory px-8 md:px-12">
+                    <img src="https://mestrereiki.com/wp-content/uploads/2025/02/cert_reiki_01.webp" alt="Certificado 1"
+                        class="flex-none w-64 md:w-80 snap-center rounded-lg shadow-xl border border-gray-200">
+                    <img src="https://mestrereiki.com/wp-content/uploads/2025/02/cert_reiki_02.webp" alt="Certificado 2"
+                        class="flex-none w-64 md:w-80 snap-center rounded-lg shadow-xl border border-gray-200">
+                    <img src="https://mestrereiki.com/wp-content/uploads/2025/02/cert_reiki_03.webp" alt="Certificado 3"
+                        class="flex-none w-64 md:w-80 snap-center rounded-lg shadow-xl border border-gray-200">
+                    <img src="https://mestrereiki.com/wp-content/uploads/2025/02/cert_reiki_04.webp" alt="Certificado 4"
+                        class="flex-none w-64 md:w-80 snap-center rounded-lg shadow-xl border border-gray-200">
+                </div>
+
+                <!-- Botão Avançar -->
+                <button
+                    onclick="document.getElementById('certificados-container').scrollBy({left: 320, behavior: 'smooth'})"
+                    class="absolute right-0 md:-right-6 top-1/2 -translate-y-1/2 z-20 bg-white hover:bg-brand text-gray-800 hover:text-white p-2 md:p-4 rounded-full transition-all shadow-[0_0_10px_rgba(0,0,0,0.15)] border border-gray-100 hover:scale-105">
+                    <svg class="w-6 h-6 md:w-8 md:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefícios: Acesso e Garantia -->
+    <section class="py-16 bg-gray-50 border-y border-gray-200">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <!-- Vitalício -->
+            <div class="flex flex-col md:flex-row items-center gap-8 md:gap-10 mb-16 md:mb-20">
+                <div class="w-full md:w-1/3 flex justify-center">
+                    <img src="https://mestrereiki.com/wp-content/uploads/2025/02/simbolo_inifinito_roxo2.webp"
+                        alt="Acesso Vitalício" class="w-32 md:w-48 drop-shadow-lg">
+                </div>
+                <div class="w-full md:w-2/3 text-center md:text-left">
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-3 md:mb-4">Acesso <span
+                            class="text-brand">Vitalício e Ilimitado</span></h2>
+                    <p class="text-base md:text-lg text-gray-700">Comprando hoje, você garante todo o conhecimento do
+                        nosso curso para sempre ao seu alcance, sem limites e sem expiração.</p>
+                    <p class="text-base md:text-lg text-gray-700 mt-2">Estude no seu próprio ritmo, sem prazos e sem
+                        pressões. Cada nova atualização e conteúdo adicional será seu, sem custo extra.</p>
+                </div>
+            </div>
+
+            <!-- Garantia -->
+            <div class="flex flex-col md:flex-row-reverse items-center gap-8 md:gap-10 mb-16 md:mb-20">
+                <div class="w-full md:w-1/2 flex justify-center">
+                    <img src="https://mestrereiki.com/wp-content/uploads/2025/02/risco_zero_costura_02.webp"
+                        alt="Garantia de 7 Dias" class="w-full max-w-[250px] md:max-w-sm drop-shadow-2xl">
+                </div>
+                <div class="w-full md:w-1/2 text-center md:text-left">
+                    <p class="text-brand font-bold uppercase tracking-wide text-xs md:text-sm mb-2">Garantia de Ouro</p>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-3 md:mb-4">Transforme-se ou Receba <span
+                            class="text-brand">100% do Seu Investimento de Volta!</span></h2>
+                    <p class="text-sm md:text-base text-gray-700 mb-2 md:mb-3">Você tem até 7 dias para assistir às
+                        aulas, explorar os materiais e avaliar a qualidade do curso.</p>
+                    <p class="text-sm md:text-base text-gray-700 mb-2 md:mb-3">Se nesse período sentir que a formação
+                        não corresponde às suas expectativas, <strong>devolvemos 100% do valor investido.</strong></p>
+                    <p class="text-sm md:text-base text-gray-700">Sem burocracia, sem letras pequenas, sem riscos.
+                        Comece agora sabendo que está totalmente protegido.</p>
+                </div>
+            </div>
+
+            <!-- Como Acessar -->
+            <div class="flex flex-col md:flex-row items-center gap-8 md:gap-10">
+                <div class="w-full md:w-1/2 flex justify-center">
+                    <img src="https://mestrereiki.com/wp-content/uploads/2025/02/img_acesso_01.webp"
+                        alt="Acesso em qualquer dispositivo"
+                        class="w-full max-w-[250px] md:max-w-sm drop-shadow-xl rounded-xl">
+                </div>
+                <div class="w-full md:w-1/2 text-center md:text-left">
+                    <p class="text-brand font-bold uppercase tracking-wide text-xs md:text-sm mb-2">Acesso instantâneo
+                    </p>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-3 md:mb-4">Como Você <span
+                            class="text-brand">Acessa o seu Curso?</span></h2>
+                    <p class="text-sm md:text-base text-gray-700 mb-2 md:mb-3">Assim que sua inscrição for confirmada,
+                        você recebe um e-mail com todas as instruções de acesso.</p>
+                    <p class="text-sm md:text-base text-gray-700 mb-2 md:mb-3">Basta clicar, inserir seus dados e
+                        pronto: o curso já estará liberado. Assista pelo celular, computador ou tablet.</p>
+                    <p class="text-sm md:text-base text-gray-700">Todo o conteúdo fica disponível de forma imediata e
+                        vitalícia na sua área de aluno.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Segurança e Oferta Final -->
+    <section class="py-16 md:py-20 bg-[#1a1025] text-white">
+        <div class="container mx-auto px-4 max-w-4xl text-center">
+
+            <h2 class="text-xl md:text-2xl font-bold mb-8 md:mb-10 text-gray-300">Em dúvida sobre comprar pela internet?
+                <br><span class="text-white mt-2 block">Adquirir Nosso Curso é Fácil e Confiável</span>
+            </h2>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-12 md:mb-16">
+                <div class="flex flex-col items-center bg-gray-800 p-6 rounded-xl">
+                    <svg class="w-10 h-10 md:w-12 md:h-12 text-brand mb-4" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M12 2L3 6v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V6l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V8.1l7-3.11v7.99z" />
+                    </svg>
+                    <p class="text-sm text-gray-300">Sua segurança online é nossa prioridade máxima.</p>
+                </div>
+                <div class="flex flex-col items-center bg-gray-800 p-6 rounded-xl">
+                    <svg class="w-10 h-10 md:w-12 md:h-12 text-brand mb-4" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM9 6c0-1.66 1.34-3 3-3s3 1.34 3 3v2H9V6zm9 14H6V10h12v10zm-6-3c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z" />
+                    </svg>
+                    <p class="text-sm text-gray-300">Compre com confiança: transação 100% protegida.</p>
+                </div>
+                <div class="flex flex-col items-center bg-gray-800 p-6 rounded-xl sm:col-span-2 md:col-span-1">
+                    <svg class="w-10 h-10 md:w-12 md:h-12 text-brand mb-4" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z" />
+                    </svg>
+                    <p class="text-sm text-gray-300">Conecte-se sem medo: cuidamos de cada detalhe.</p>
+                </div>
+            </div>
+
+            <!-- Preço e Botão Final -->
+            <div
+                class="bg-gray-900 border-2 border-brand rounded-2xl p-6 md:p-12 shadow-[0_0_30px_rgba(183,155,242,0.15)] relative overflow-hidden">
+                <h2 class="text-2xl md:text-3xl font-bold mb-6">Oferta Especial Por <span class="text-brand">Tempo
+                        Limitado!</span></h2>
+
+                <!-- Countdown Simples -->
+                <div class="flex justify-center gap-3 md:gap-4 mb-6 md:mb-8 text-brand font-bold text-2xl">
+                    <div class="flex flex-col items-center"><span id="mins" class="text-3xl md:text-4xl">15</span><span
+                            class="text-xs md:text-sm font-normal text-gray-400">Minutos</span></div>
+                    <span class="text-3xl md:text-4xl">:</span>
+                    <div class="flex flex-col items-center"><span id="secs" class="text-3xl md:text-4xl">00</span><span
+                            class="text-xs md:text-sm font-normal text-gray-400">Segundos</span></div>
+                </div>
+
+                <p class="text-lg md:text-xl text-gray-400 line-through mb-1 md:mb-2">de R$ 394,90</p>
+                <p class="text-xl md:text-2xl font-bold mb-1 md:mb-2">Por Apenas</p>
+                <p class="text-4xl sm:text-5xl md:text-6xl font-black text-brand mb-3 md:mb-4">12x de R$ 20,37</p>
+                <p class="text-base md:text-lg text-gray-300 mb-6 md:mb-8">ou à vista por R$ 197,00</p>
+
+                <a href="https://go.hotmart.com/N105853240O?ap=932e"
+                    class="block w-full max-w-md mx-auto bg-brand hover:bg-brand-light text-[#1a1025] font-black text-lg md:text-xl py-4 md:py-5 px-4 md:px-6 rounded-full shadow-[0_0_20px_rgba(183,155,242,0.4)] transition-all hover:scale-105 mb-6 md:mb-8">
+                    SIM, QUERO COMEÇAR AGORA!
+                </a>
+
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-6">
+                    <img src="https://mestrereiki.com/wp-content/uploads/2022/10/payments-logo-1.png"
+                        alt="Formas de Pagamento" class="h-6 md:h-8 opacity-80">
+                    <img src="https://mestrereiki.com/wp-content/uploads/2022/11/Selo-1-branco.png" alt="Compra Segura"
+                        class="h-12 md:h-16 opacity-80">
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <img src="https://tracker-email-tau.vercel.app/api/imagem?t=Site_CursoCompletodeReikiFormaçãodeMestre" width="1" height="1" style="display:none;" />
+    
+    
+    
+    <!-- Footer -->
+    <footer class="bg-gray-950 text-gray-400 py-10 md:py-12">
+        <div class="container mx-auto px-4 flex flex-col items-center text-center">
+
+            <div class="flex flex-wrap justify-center gap-4 md:gap-6 mb-6 md:mb-8 text-xs md:text-sm">
+                <a href="#"
+                    class="hover:text-brand font-bold text-white transition-colors w-full sm:w-auto mb-2 sm:mb-0">VER
+                    TODOS OS PRODUTOS</a>
+                <a href="#" class="hover:text-brand transition-colors">Sobre
+                    nós</a>
+                <a href="#" class="hover:text-brand transition-colors">Suporte</a>
+                <a href="#" class="hover:text-brand transition-colors">Termos de Uso</a>
+                <a href="#" class="hover:text-brand transition-colors">Política de Privacidade</a>
+            </div>
+
+            <p class="text-xs">© Cursos Online | Todos os direitos reservados. CNPJ: 20.293.416/0001-52</p>
+        </div>
+    </footer>
+
+    <!-- Script para o Cronômetro Evergreen de 15 minutos -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const timeLimit = 20 * 60; // 15 minutos em segundos
+            let timeRemaining = localStorage.getItem('countdown_timer');
+
+            if (!timeRemaining) {
+                timeRemaining = timeLimit;
+            } else {
+                timeRemaining = parseInt(timeRemaining, 10);
+            }
+
+            const minEl = document.getElementById('mins');
+            const secEl = document.getElementById('secs');
+
+            const updateTimer = () => {
+                const minutes = Math.floor(timeRemaining / 60);
+                const seconds = timeRemaining % 60;
+
+                minEl.textContent = minutes.toString().padStart(2, '0');
+                secEl.textContent = seconds.toString().padStart(2, '0');
+
+                if (timeRemaining > 0) {
+                    timeRemaining--;
+                    localStorage.setItem('countdown_timer', timeRemaining);
+                } else {
+                    // Reinicia o timer se chegar a zero
+                    timeRemaining = timeLimit;
+                }
+            };
+
+            setInterval(updateTimer, 1000);
+            updateTimer();
+        });
+
+        function iniciarVideo() {
+            const capa = document.getElementById('video-cover');
+            const iframe = document.getElementById('video-iframe');
+
+            // 1. Esconde a imagem de capa
+            capa.style.display = 'none';
+
+            // 2. Altera o link do YouTube adicionando o autoplay para o vídeo começar direto
+            iframe.src += "&autoplay=1";
+        }
+
+
+
+    
+    </script>
+</body>
+
+</html>
